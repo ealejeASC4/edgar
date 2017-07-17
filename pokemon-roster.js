@@ -24,7 +24,7 @@ var pokemonRoster =
         [35], 
         [40], 
         [55], 
-        [False],
+        [false],
     ],
     
     [
@@ -33,7 +33,7 @@ var pokemonRoster =
         [80], 
         [130],   
         [135], 
-        [False],
+        [false],
     ],
     
     [
@@ -42,7 +42,7 @@ var pokemonRoster =
         [75], 
         [110], 
         [100], 
-        [False],
+        [false],
     ],
 
     [
@@ -55,3 +55,11 @@ var pokemonRoster =
     ],
 ]
 
+for (var i = 0; i < pokemonRoster.length; i++){
+    console.log ("name:" + pokemonRoster[i] [0])
+    console.log ("type:" + pokemonRoster[i] [1])
+    console.log ("HP:" + pokemonRoster[i] [2])
+    console.log ("Defense:" + pokemonRoster[i] [3])
+    console.log ("Attack:" + pokemonRoster[i] [4])
+    console.log ("legendary:" + pokemonRoster[i] [5])
+}
