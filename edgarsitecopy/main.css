@@ -1,0 +1,42 @@
+div {
+    display: block;
+}
+
+
+element.style {
+}
+#header-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #7db2db;
+    color:white;
+}
+@media screen and (max-width: 991px){
+
+.page-section{
+    height: auto;
+        position: relative;
+}}
+
+@media (max-width: 640px){
+.headline {
+    padding: 25px 0 20px 0;
+}}
+
+@media (max-width: 768px){
+.container {
+    margin: 0 15px;
+}}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+@media (max-width: 640px){
+one-page-wonder.css:823
+h2 {
+    font-size: 20px;
+    
+}}
