@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Edgar Alejandro Personal Site</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="pers.js"></script>
+        <link rel="stylesheet" href="Pers.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    </head>
+    <body>
+
+<div class="Headtop">
+        <header>
+<h1> Edgar Alejandro</h1>            
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://www.w3schools.com/css/trolltunga.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="http://www.bioathens.com/wp-content/uploads/2013/10/Autumn-Forest-In-Morning-Wallpaper-1000x400.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="http://tixway.com/wp-content/uploads/2015/11/tw-slider_0015_352114-technology-wallpaper1.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</header>
+</div>
+
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Edgar Alejandro </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">About Myself <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">My works </a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Information <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Bio</a></li>
+            <li><a href="#">Contac info </a></li>
+            <li><a href="#">Information</a></li>
+         
+          </ul>
+        </li>
+      </ul>
+   
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<div class="container">
+    <div class="row">
+  <div class="col-sm-7">
+  <h2>About Myself </h2>
+  </div>
+  <div class="col-sm-5">
+  <img src="data:image/jpeg;base64,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"width="200" height"200" ></img>
+</div>
+<br>
+</div>
+  <div class="panel panel-default">
+    <div class="panel-heading">From The Start</div>
+    <div class="panel-body">I am a 16 Year old studying to be a computer science major in college. I'm in the All Star Code summer Intensive Program. Some things I enjoy Is art, Video Games, And programming!!  </div>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <h2>My works </h2>
+  <div class="panel panel-default">
+    <div class="panel-heading">Links to my work</div>
+    <div class="panel-body">
+Dank Memes  </div>
+  </div>
+</div>
+    
+        </body>
+        <footer>
+   <h2>My contact Info </h2>   
+
+
+
+   <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+    Contact E-mail
+    </span>
+   
+</footer>
+</html>
