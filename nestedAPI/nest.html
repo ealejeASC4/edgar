@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <head>
-    <title>Random Users </title> 
+    <title>Dating Web </title> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>    
     <script src="nest.js"></script>
     <link href="nest.css" rel="stylesheet">
 
 
+     <!--Reference platform.js library here
+    965589098153-gtuaolufu4gl12n9ku6p443he8qd73nt.apps.googleusercontent.com-->
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    
+   
+    
+    <!--Reference Client ID in meta tag here-->
+ <meta name="google-signin-client_id" content="965589098153-gtuaolufu4gl12n9ku6p443he8qd73nt.apps.googleusercontent.com">
+
+
     </head>
 <body>
+
+    <div class="signs">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" class="signOut" onclick="onSignOut();">Sign out</a>
+    </div>
+
+
+    <div class ="mainContainer">
+        <!--Text greeting user-->
+        <header>
+            <h1>WELCOME <span class="userName">Your_Username</span></h1>    
+        </header>
+
+        <!--Populate section with user data-->
+        <section>
+            <!--picture-->
+            <div id='userImg' class = "userImg">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQABotzdF2pYgVkuDNfEHGT9cSur6qgF7q2vpsoZSCvEBOYQaxcZq3vyQ">
+            </div>
+
+            <!--User Data-->
+            <div class="userData">
+                <p>E-MAIL:</p>
+                <p class="email">example@example.com</p>
+            </div>
+        </section>
+    </div>
+
+
     <div class="ribbon">
 <form>
 <input type="button" value="Get a new bae " onclick="window.location.reload()">

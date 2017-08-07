@@ -101,3 +101,28 @@ h2{
 img{
   border-radius: 50%;
 }
+h1{
+  color: white;
+}
+
+.userImg{
+    border: 2px solid blanchedalmond;
+    border-radius: 50%;
+    width:130px;
+    height:130px;
+    padding:4px;
+    margin: 0 auto;
+    background-color: rebeccapurple;*/
+
+    /*Rainbow effect taken from https://codepen.io/nohoid/pen/kIfto*/
+    background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    animation: rainbow 18s ease infinite;
+}
+p{
+  color: white;
+}
+
+imbro{
+  width: 150%;
+}
