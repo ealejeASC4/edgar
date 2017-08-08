@@ -7,27 +7,46 @@
 <link rel="stylesheet" href="RPS.css" >
 
 
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDO4y5Iv7qWqfzjkTIXAm78SlD7XcC8KXY",
+    authDomain: "rps-game-55657.firebaseapp.com",
+    databaseURL: "https://rps-game-55657.firebaseio.com",
+    projectId: "rps-game-55657",
+    storageBucket: "",
+    messagingSenderId: "686321241026"
+  };
+  firebase.initializeApp(config);
+</script>
+
 </head>
 <body>
+
 <h1>Rock Paper Scissors Game </h1>
 
 <h2>Choose one and see if you win </h2>
 
-
-
-
 <div class="container">
 <div id=disable  class:'inline'>
-    <div class="btn btn-2" id='chooserock' class='a'>
-        <input type="button"  onclick="getRock()" value="Rock"/>
-        <!--<button type="button" class ='z'>ROCK</button>-->
+    <form action="#results" method="get">
+    <div class="btn btn-3" id='chooserock' class='a'>
+       <form action="#results" method="get">
+        <input class="choices" type="submit" value="Rock" onclick="chooseChoice(this.value)" >
     </div>
-    <div class="btn btn-2" id='choosepaper' class='b'>
-        <input type="button"  onclick="getPaper()" value="Paper"/>
+    <div class="btn btn-3" id='choosepaper' class='b'>
+     <input class="choices" type="submit" value="Paper" onclick="chooseChoice(this.value)" >
     </div>
-    <div class="btn btn-2" id='choosescissors' class='c'>
-        <input type="button" onclick="getScissors()" value="Scissors"/>
+    <div class="btn btn-3" id='choosescissors' class='c'>
+     <input class="choices" type="submit" value="Scissors" onclick="chooseChoice(this.value)" >
     </div>
+</div>
+</form>
+<div class="container">
+  <p></p> 
+</div>
+<div id="results">
 </div>
 
 </body>
