@@ -9,10 +9,8 @@ function randLetter(index) {
 console.log(alphabet[randLetter(alphabet.length)]);
 
 
-var randLength
-
 function randWord(){  
-    for (randLength i=0; i<27; i++){
+    for (i = 0; i<alphabet.length; i++){
         Console.log()
     }
 }

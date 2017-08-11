@@ -4,7 +4,14 @@ var randomChoice = choices[randomNum];
 var didWin = false;
 var numOfTries = 0;
 
+function updateDB(){
+    var name = $("#inpname").val();
+    var message = $("#message").val();
+    myName = name
 
+   console.log(name + " : " + message);
+    $("body").append("<p><center><font color='white'><font size='10'>Welcome: " + name + "</font></font></center></p>")
+}
 
 // function displayscore()
 
@@ -45,61 +52,10 @@ function chooseChoice(value) {
     numOfTries = numOfTries + 1;
     if(didWin) {
         $("#results").append("<p>It took you " + numOfTries + " tries.</p>");
-        var voteB =  document.getElementById("buttons");
+        var voteB =  document.getElementById("disable");
         voteB.style.display='none';
     }
 }
-// var p1Choice = choices[randomChoices]; // rock
-// var p2Choice = choices[randomChoices]; //scissors
-
-// if (p1Choice == p2Choice){
-//     console.log("a tie");
-// }else if (p1Choice === choices[1]){
-//     if (p2Choice === choices[0]){
- 
-
-
-//         console.log("player 1 loses")
-//         console.log("rock beats scissors")
-
-//     }else {
-
-
-
-
-//         console.log("players 1 wins")
-//         console.log("scissors beats paper")
-//     }
-// }
-// else if (p1Choice === choices[2]){
-//     if (p2Choice === choices[0]){
-
-
-
-//         console.log("player 1 wins")
-//         console.log("paper beats rock")
-
-//     }else {
-
-
-//         console.log("player 1 loses")
-//         console.log("scissors beats paper")
-//     }
-// }
-// else if (p1Choice === choices[2]){
-//     if (p2Choice === choices[1]){
-
-
-//         console.log("player 1 loses")
-//         console.log("scissors beats paper ")
-
-//     }else {
-
-
-//         console.log("player 1 wins")
-//         console.log("paper beats rock")
-//     }
-// }
 
 
 
