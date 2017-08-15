@@ -1,16 +1,57 @@
+let lad;
+let long;
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(setPosition);
+    } else { 
+        console.log("Geolocation is not supported by this browser.");
+    }
+}
+
+function setPosition(position) {
+    lad = position.coords.latitude;
+    long =  position.coords.longitude;
+    showMap();
+}
 
 
 
+function showMap(){
+    console.log(lad);
+    console.log(long);
+    $('#map').append(`<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC9cq0C9hKbLH8pY-dp33N09L2lkVbU2xc
+    &q=Yahoo+New+York&center=${lad},${long}" allowfullscreen>
+</iframe>`)
+}
 
 
-
-
-
-
-
-
-
-
+function autoRegister() {
+     $(document).ready(function() {
+        
+       var token = '4FCWIL2LHNN22RG4DZRH';
+        var $events = $("#events");
+        
+       $.get('https://www.eventbriteapi.com/v3/events/search/?location.address=New+York%2C+NY+10036&price=free&start_date.keyword=today&token='+token, function(res) {
+            if(res.events.length) {
+                var s = "<ul class='eventList'>"
+                let randomEvent =  Math.floor(Math.random() * res.events.length)
+                let newEvent = res.events[randomEvent]
+                s += "<li><a href='" + newEvent.url + "'>" + newEvent.name.text + "</a> </li>"
+                
+               $events.html("You're going to: " + s);
+             } else {
+                $events.html("<p>Sorry, there are no upcoming events.</p>");
+            }
+        });
+        
+       
+   });
+}
 
 
 
@@ -184,4 +225,7 @@ var Layout = function () {
 
 $(document).ready(function() {
     Layout.init();
+    getLocation();
+
+    
 });
