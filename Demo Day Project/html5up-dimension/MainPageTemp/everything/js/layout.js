@@ -30,6 +30,9 @@ function showMap(){
 }
 
 
+let newEvent;
+let ticketURL;
+
 function autoRegister() {
      $(document).ready(function() {
         
@@ -40,8 +43,17 @@ function autoRegister() {
             if(res.events.length) {
                 var s = "<ul class='eventList'>"
                 let randomEvent =  Math.floor(Math.random() * res.events.length)
-                let newEvent = res.events[randomEvent]
-                s += "<li><a href='" + newEvent.url + "'>" + newEvent.name.text + "</a> </li>"
+                newEvent = res.events[randomEvent]
+                ticketURL = "//eventbrite.com/tickets-external?eid="+newEvent.id+"&ref=etckt"
+                document.getElementById("ticket").src = ticketURL
+
+               
+               
+
+               // window.open('https://www.eventbrite.com/#/signin');
+
+
+               s += "<li><a href='" + newEvent.url + "'>" + newEvent.name.text +  "</a> </li>"
                 
                $events.html("You're going to: " + s);
              } else {
@@ -52,6 +64,7 @@ function autoRegister() {
        
    });
 }
+
 
 
 
@@ -229,3 +242,30 @@ $(document).ready(function() {
 
     
 });
+
+function onSignIn(googleUser) {
+    console.log('User signed in!');
+    var profile = googleUser.getBasicProfile();
+    //change userName text, img source, & email text based on profile
+    $(".userName").text(profile.getName());
+    $("imgURL").attr("src", profile.getImageUrl());
+    $(".email").text(profile.getEmail());
+}
+
+//called when "sign out" button clicked
+function onSignOut() {
+    //should sign user out and toggleHidden
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+        if (confirm('Save progress?')) {
+    // Save it!
+} else {
+    // Do nothing!
+}
+        console.log('User signed out.')
+        //setting back to default
+        $(".userName").text("GUEST");
+        $("imgURL").attr("src", "assets/placeholder.png");
+        $(".email").text("");
+    });
+}
