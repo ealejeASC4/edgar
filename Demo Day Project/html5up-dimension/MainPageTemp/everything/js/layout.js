@@ -65,8 +65,36 @@ function autoRegister() {
    });
 }
 
+function submitScore() {
+       firebase.database().ref(myName).set(
+        {
+            HighScore : 10
+        }
+    )
+}
+
+// Show data
+ var database = firebase.database().ref()
+
+database.on("child_added",  function(rowData) {
+    $("body").append("<div><em><font size='5'>"+rowData.key+" : "+rowData.val().HighScore+"</em></font></div>");
+})
+
+function updateDB(){
+
+   const name = $("#name").val();
+    const message = $("#message").val();
+    myName = name
+
+   console.log(`${name} : ${message}`);
+    $(".userData").append(`<p><center><font color='white'><font size='10'>Welcome: ${name}</font></font></center></p>`)
 
 
+   //Update database here
+    
+   
+
+}
 
 
 var Layout = function () {
